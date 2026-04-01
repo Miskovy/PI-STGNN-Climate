@@ -32,3 +32,29 @@ Evaluated on an unseen 40-year historical dataset (ERA5/PRISM), the PI-STGNN dem
 Ensure you have PyTorch and PyTorch Geometric installed. 
 ```bash
 pip install -r requirements.txt
+```
+### 2. Copernicus API Setup
+You will need a CDS API key to download the historical ERA5 dataset. Save your credentials to ~/.cdsapirc:
+```bash
+url: [https://cds.climate.copernicus.eu/api](https://cds.climate.copernicus.eu/api)
+key: YOUR_PERSONAL_ACCESS_TOKEN
+```
+### 3. Execution
+Run the end-to-end pipeline from the src directory:
+```bash
+cd src
+python data_pipeline.py  # Downloads and chunks data into .pt tensors
+python train.py          # Trains the STGNN and outputs evaluation metrics
+python explainability.py # Generates the feature attribution heatmap
+```
+## 📝 Citation
+If you utilize this codebase or architecture in your research, please cite our corresponding paper:
+
+```text
+@article{YourName2026,
+  title={Unraveling the Spatiotemporal Dynamics of Extreme Precipitation: A Physics-Informed Graph Neural Network Approach},
+  author={Mazen Khairy},
+  journal={TBD},
+  year={2026}
+}
+```
