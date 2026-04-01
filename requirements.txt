@@ -1,0 +1,10 @@
+torch>=2.0.0
+torch_geometric
+xarray
+rioxarray
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+cdsapi
