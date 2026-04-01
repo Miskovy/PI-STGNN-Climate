@@ -1,0 +1,14 @@
+# Environments
+.env
+.venv
+env/
+venv/
+__pycache__/
+
+# Data and Outputs (Never commit large datasets or weights)
+data/
+outputs/
+*.nc
+*.tif
+*.pt
+*.pth
